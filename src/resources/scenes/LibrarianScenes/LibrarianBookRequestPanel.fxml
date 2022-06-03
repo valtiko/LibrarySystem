@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="myAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LibrarianControllers.LibrarianBookRequestPanelController">
+    <Button fx:id="backButton" layoutX="653.0" layoutY="528.0" mnemonicParsing="false" onAction="#backToMainScreen" prefHeight="25.0" prefWidth="89.0" text="Wróć" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="40.0" />
+    <TabPane layoutY="65.0" prefHeight="500.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+        <Tab text="Zwroty">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="280" prefWidth="800">
+                <TableView fx:id="returnBookList" layoutY="-1" onMouseClicked="#changeAvailabilityOfReturnButtons" prefHeight="443" prefWidth="800" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <columns>
+                        <TableColumn fx:id="col_titleRet" prefWidth="170.0" text="Tytuł" />
+                        <TableColumn fx:id="col_authorRet" prefWidth="155.0" text="Autor" />
+                        <TableColumn fx:id="col_ISBNRet" prefWidth="85.0" text="ISBN" />
+                        <TableColumn fx:id="col_returnDate" prefWidth="180.0" text="Data końca wypożyczenia" />
+                        <TableColumn fx:id="col_readerRet" prefWidth="210.0" text="Zwracający" />
+                    </columns>
+                </TableView>
+                <Button fx:id="acceptReturnButton" disable="true" layoutX="28.0" layoutY="445.0" mnemonicParsing="false" onAction="#returnBook" text="Przyjmij zwrot" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="30.0" />
+                <Button fx:id="sendToDestroyedListButton" disable="true" layoutX="125.0" layoutY="445.0" mnemonicParsing="false" onAction="#changeBookStatus" text="Zniszczona książka" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="130.0" />
+            </AnchorPane>
+        </Tab>
+        <Tab text="Rezerwacje">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="280" prefWidth="800">
+                <TableView fx:id="reservationList" layoutY="-1" onMouseClicked="#changeAvailabilityOfReservationButton" prefHeight="443" prefWidth="800" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <columns>
+                        <TableColumn fx:id="col_titleRes" prefWidth="170.0" text="Tytuł" />
+                        <TableColumn fx:id="col_authorRes" prefWidth="160.0" text="Autor" />
+                        <TableColumn fx:id="col_reservationDate" prefWidth="140.0" text="Data rezerwacji" />
+                        <TableColumn fx:id="col_readerRes" prefWidth="190.0" text="Rezerwujący" />
+                        <TableColumn fx:id="col_endOfReservationDate" prefWidth="140.0" text="Data końca rezerwacji" />
+                    </columns>
+                </TableView>
+                <Button fx:id="informUserButton" disable="true" layoutX="28.0" layoutY="445.0" mnemonicParsing="false" onAction="#informUser" text="Poinformuj o dostępności" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="30.0" />
+            </AnchorPane>
+        </Tab>
+        <Tab text="Przedłużenia">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="280" prefWidth="800">
+                <TableView fx:id="extensionsList" layoutY="-1" onMouseClicked="#changeAvailabilityOfExtensionButtons" prefHeight="443" prefWidth="800" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <columns>
+                        <TableColumn fx:id="col_titleExt" prefWidth="170.0" text="Tytuł" />
+                        <TableColumn fx:id="col_authorExt" prefWidth="155.0" text="Autor" />
+                        <TableColumn fx:id="col_ISBNExt" prefWidth="85.0" text="ISBN" />
+                        <TableColumn fx:id="col_returnExt" prefWidth="180.0" text="Data końca wypożyczenia" />
+                        <TableColumn fx:id="col_readerExt" prefWidth="210.0" text="Wypożyczający" />
+                    </columns>
+                </TableView>
+                <Button fx:id="acceptExtensionButton" disable="true" layoutX="28.0" layoutY="445.0" mnemonicParsing="false" onAction="#extendBookBorrow" text="Przedłuż wypożyczenie" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="30.0" />
+                <Button fx:id="rejectExtensionButton" disable="true" layoutX="195.0" layoutY="445.0" mnemonicParsing="false" onAction="#rejectBorrowExtension" text="Nie przedłużaj wypożyczenia" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="194.0" />
+            </AnchorPane>
+        </Tab>
+    </TabPane>
+</AnchorPane>

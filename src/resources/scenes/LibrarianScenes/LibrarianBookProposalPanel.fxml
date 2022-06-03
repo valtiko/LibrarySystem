@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="myAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LibrarianControllers.LibrarianBookProposalPanelController">
+    <Button id="button" layoutX="653.0" layoutY="528.0" mnemonicParsing="false" onAction="#backToMainScreen" prefHeight="25.0" prefWidth="89.0" text="Wróć" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="40.0" />
+    <TabPane layoutY="65.0" prefHeight="500.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+        <Tab text="Książki zaproponowane przez użytkowników">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="280.0" prefWidth="800.0">
+                <TableView fx:id="newBooksSuggestions" layoutY="-1.0" onMouseClicked="#changeAvailabilityOfReturnButtons" prefHeight="443.0" prefWidth="800.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <columns>
+                        <TableColumn fx:id="col_titleSug" prefWidth="289.0" text="Tytuł" />
+                        <TableColumn fx:id="col_authorSug" prefWidth="261.0" text="Autor" />
+                        <TableColumn fx:id="col_readerSug" prefWidth="249.0" text="Zaproponował" />
+                    </columns>
+                </TableView>
+                <Button fx:id="sendListButton" layoutX="14.0" layoutY="445.0" mnemonicParsing="false" onAction="#sendList" text="Wyślij listę do księgowego" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="30.0" />
+                <Button fx:id="rejectProposalButton" disable="true" layoutX="200.0" layoutY="445.0" mnemonicParsing="false" onAction="#rejectBookProposal" text="Usuń propozycje" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="200.0" />
+            </AnchorPane>
+        </Tab>
+    </TabPane>
+</AnchorPane>

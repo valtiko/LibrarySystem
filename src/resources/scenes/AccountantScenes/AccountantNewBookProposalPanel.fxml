@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import javafx.scene.control.Label?>
+<AnchorPane fx:id="AccountantNewBookProposalPanel" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AccountantControllers.new_book.NewBookProposalPanelController">
+    <children>
+        <Label layoutX="630.0" layoutY="10.0" prefWidth="100.0" prefHeight="25.0" text="Budżet"/>
+        <TextField fx:id="budzet" layoutX="670.0" layoutY="10.0" prefWidth="100.0" promptText="Budżet" editable="false"/>
+        <Label layoutX="780.0" layoutY="10.0" prefWidth="20.0" prefHeight="25.0" text="zł"/>
+        <TabPane layoutX="10.0" layoutY="75.0" prefHeight="500.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Lista książek do kupna">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="280.0" prefWidth="800.0">
+                            <children>
+                                <TableView fx:id="newProposalBookTable" layoutY="-1.0" prefHeight="443.0" prefWidth="630.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="170.0">
+                                    <columns>
+                                        <TableColumn fx:id="col_titleB" prefWidth="200.0" text="Tytuł" />
+                                        <TableColumn fx:id="col_authorB" prefWidth="170.0" text="Autor" />
+                                        <TableColumn fx:id="col_priceB" prefWidth="155.0" text="Cena" />
+                                        <TableColumn fx:id="col_quantityB" prefWidth="105.0" text="Ilość" />
+                                    </columns>
+                                </TableView>
+                                <TextField fx:id="tytul" layoutX="640.0" layoutY="20.0" prefWidth="142.0" promptText="Tytuł" />
+                                <TextField fx:id="autor" layoutX="640.0" layoutY="50.0" prefWidth="142.0" promptText="Autor" />
+                                <TextField fx:id="cena" layoutX="641.0" layoutY="80.0" prefWidth="142.0" promptText="Cena" />
+                                <TextField fx:id="ilosc" layoutX="641.0" layoutY="110.0" prefWidth="142.0" promptText="Ilość" />
+                                <Button fx:id="zatwierdzKsiazke" layoutX="660.0" layoutY="150.0" mnemonicParsing="false" prefWidth="100.0" text="Dodaj do listy" />
+                                <Button fx:id="usunKsiazkeZListy" layoutX="660.0" layoutY="180.0" mnemonicParsing="false" prefWidth="100.0" text="Usuń z listy" />
+                                <Button fx:id="zatwierdzListe" layoutY="445.0" mnemonicParsing="false" prefWidth="100.0" text="Zatwierdz"/>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+        <Button id="button" layoutX="675.0" layoutY="545.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" onAction="#backToMainScreen" text="Wróć" />
+    </children>
+</AnchorPane>

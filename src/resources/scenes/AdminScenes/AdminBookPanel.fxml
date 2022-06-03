@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdminControllers.AdminBookPanelController">
+    <TableView fx:id="bookTableView" layoutY="24.0" onMouseClicked="#getSelected" prefHeight="577.0" prefWidth="660.0">
+        <columns>
+            <TableColumn fx:id="col_titleNew" prefWidth="203.0" text="Nazwa książki" />
+            <TableColumn fx:id="col_authorNew" prefWidth="145.0" text="Autor" />
+            <TableColumn fx:id="col_categoryNew" prefWidth="144.0" text="Kategoria" />
+            <TableColumn fx:id="isbnColumn" prefWidth="167.0" text="ISBN" />
+        </columns>
+    </TableView>
+    <TextField fx:id="searchTextField" layoutY="-1.0" prefHeight="25.0" prefWidth="493.0"/>
+    <Button layoutX="660.0" layoutY="276.0" mnemonicParsing="false" onAction="#editBook" prefHeight="25.0" prefWidth="140.0" text="Edytuj książkę" />
+    <Button layoutX="660.0" layoutY="313.0" mnemonicParsing="false" onAction="#deleteBook" prefHeight="25.0" prefWidth="140.0" text="Usun książkę" />
+    <Button layoutX="660.0" layoutY="-1.0" mnemonicParsing="false" onMouseClicked="#goAddUserScene" prefHeight="40.0" prefWidth="140.0" text="Panel Uzytkowników" />
+    <Button layoutX="660.0" layoutY="39.0" mnemonicParsing="false" onMouseClicked="#goReportPanel" prefHeight="40.0" prefWidth="140.0" text="Raporty" />
+    <Button layoutX="660.0" layoutY="238.0" mnemonicParsing="false" onMouseClicked="#addBook" prefHeight="25.0" prefWidth="140.0" text="Dodaj książkę" />
+    <TextField fx:id="bookNameTextField" layoutX="660.0" layoutY="134.0" prefHeight="25.0" prefWidth="140.0" promptText="Nazwa ksiazki" />
+    <ComboBox fx:id="authorComboBox" layoutX="660.0" layoutY="203.0" prefHeight="25.0" prefWidth="140.0" promptText="Wybierz autora" />
+    <TextField fx:id="categoryTextField" layoutX="660.0" layoutY="170.0" prefHeight="25.0" prefWidth="140.0" promptText="Kateogria" />
+    <Button layoutX="660.0" layoutY="79.0" mnemonicParsing="false" onMouseClicked="#goAddAuthorScene" prefHeight="40.0" prefWidth="140.0" text="Dodaj autora" />
+   <Button layoutX="493.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="166.0" onAction="#searchText" text="Szukaj" />
+</AnchorPane>

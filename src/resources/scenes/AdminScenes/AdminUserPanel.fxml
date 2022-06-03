@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdminControllers.AdminUserPanelController">
+    <TableView fx:id="personTableView" layoutY="24.0" onMouseClicked="#getSelected" prefHeight="577.0" prefWidth="660.0">
+        <columns>
+            <TableColumn fx:id="nameColumn" prefWidth="178.0" text="imie" />
+            <TableColumn fx:id="lastNameColumn" prefWidth="160.0" text="nazwisko" />
+            <TableColumn fx:id="emailColumn" prefWidth="173.0" text="email" />
+            <TableColumn fx:id="roleColumn" prefWidth="148.0" text="rola" />
+        </columns>
+
+    </TableView>
+    <TextField fx:id="searchTextField" layoutY="-1.0"  prefHeight="25.0" prefWidth="512.0" />
+    <Button layoutX="660.0" layoutY="256.0" mnemonicParsing="false" onAction="#editUser" prefHeight="25.0" prefWidth="140.0" text="Edytuj użytkownika" />
+    <Button fx:id="deleteButton" layoutX="659.0" layoutY="288.0" mnemonicParsing="false" onAction="#deleteUser" prefHeight="25.0" prefWidth="140.0" text="Usuń użytkownika" />
+    <Button layoutX="659.0" mnemonicParsing="false" onMouseClicked="#goBookPanel" prefHeight="45.0" prefWidth="140.0" text="Panel Książek" />
+    <Button layoutX="659.0" layoutY="45.0" mnemonicParsing="false" onMouseClicked="#goReportPanel" prefHeight="45.0" prefWidth="140.0" text="Raporty" />
+    <Button layoutX="660.0" layoutY="575.0" mnemonicParsing="false" onMouseClicked="#logout" prefHeight="25.0" prefWidth="140.0" text="Wyloguj się" />
+    <TextField fx:id="nameTextField" layoutX="659.0" layoutY="125.0" prefHeight="10.0" prefWidth="140.0" promptText="Imie" />
+    <TextField fx:id="lastNameTextField" layoutX="659.0" layoutY="156.0" prefHeight="25.0" prefWidth="140.0" promptText="Nazwisko" />
+    <ComboBox fx:id="roleComboBox" layoutX="660.0" layoutY="223.0" prefHeight="25.0" prefWidth="140.0" promptText="rola" />
+    <TextField fx:id="emailTextField" layoutX="659.0" layoutY="190.0" prefHeight="11.0" prefWidth="140.0" promptText="Email" />
+   <Button layoutX="512.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="25.0" onAction="#searchText" prefWidth="148.0" text="Szukaj" />
+</AnchorPane>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="myAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LibrarianControllers.LibrarianMainPanelController">
+    <Button id="button" layoutX="653.0" layoutY="528.0" mnemonicParsing="false" onAction="#backToLoginScreen" prefHeight="25.0" prefWidth="89.0" text="Wyloguj" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="40.0" />
+    <children>
+      <Button layoutX="474.0" layoutY="43.0" mnemonicParsing="false" onAction="#goToLibrarianBorrowsPanel" prefHeight="127.0" prefWidth="225.0" text="Wypożyczenia" />
+      <Button layoutX="474.0" layoutY="189.0" mnemonicParsing="false" onAction="#goToLibrarianBookProposalPanel" prefHeight="127.0" prefWidth="225.0" text="Propozycje książek do zamówienia" />
+      <Button layoutX="474.0" layoutY="365.0" mnemonicParsing="false" onAction="#goToLibrarianReportsPanel" prefHeight="127.0" prefWidth="225.0" text="Listy książek nowych oraz zniszczonych" />
+   </children>
+</AnchorPane>

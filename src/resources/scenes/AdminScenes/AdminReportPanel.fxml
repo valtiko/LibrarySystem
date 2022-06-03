@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.AdminControllers.AdminReportPanelController">
+    <TableView fx:id="reportTableView" prefHeight="601.0" prefWidth="660.0">
+        <columns>
+            <TableColumn fx:id="reportDateColumn" prefWidth="283.0" text="Data"/>
+            <TableColumn fx:id="typeOfReportColumn" prefWidth="376.0" text="Typ raportu"/>
+        </columns>
+    </TableView>
+    <Button layoutX="659.0" mnemonicParsing="false" onMouseClicked="#goBookPanel" prefHeight="45.0" prefWidth="140.0"
+            text="Panel Książek"/>
+    <Button layoutX="659.0" layoutY="45.0" mnemonicParsing="false" onMouseClicked="#goBackToUserPanel" prefHeight="45.0"
+            prefWidth="140.0" text="Panel uzytkownika"/>
+    <Button layoutX="659.0" layoutY="224.0" mnemonicParsing="false" onAction="#generateReport" prefHeight="25.0"
+            prefWidth="140.0" text="Generuj raport"/>
+    <Button layoutX="659.0" layoutY="190.0" mnemonicParsing="false" onAction="#deleteReport" prefHeight="25.0"
+            prefWidth="140.0" text="Usun Raport"/>
+
+</AnchorPane>

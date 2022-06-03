@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.ProgressBar?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AccountantControllers.invoice.InvoicePanelController">
+   <children>
+      <TabPane layoutX="10.0" layoutY="75.0" prefHeight="500.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="Faktury">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="280.0" prefWidth="800.0">
+                     <children>
+                        <TableView fx:id="newInvoiceList" layoutY="-1.0" prefHeight="443.0" prefWidth="630.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="170.0" >
+                           <columns>
+                              <TableColumn fx:id="col_invoiceNumber" prefWidth="100.0" text="Numer faktury" />
+                              <TableColumn fx:id="col_subjectName" prefWidth="200.0" text="Nazwa podmiotu wystawiającego" />
+                              <TableColumn fx:id="col_status" prefWidth="200.0" text="Status" />
+                              <TableColumn fx:id="col_addtionalInfo" prefWidth="330.0" text="Informacje dodatkowe" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="numer_faktury" layoutX="640.0" layoutY="20.0" prefWidth="142.0" promptText="Faktura" />
+                        <TextField fx:id="nazwa_podmiotu" layoutX="640.0" layoutY="50.0" prefWidth="142.0" promptText="Nazwa podmiotu" />
+                        <TextField fx:id="informacje_dodatkowe_faktury" layoutX="640.0" layoutY="80.0" prefHeight="72.0" prefWidth="142.0" promptText="Informacje" />
+                        <Button layoutX="660.0" layoutY="155.0" mnemonicParsing="false" prefWidth="100.0" text="Załaduj plik" onAction="#zaladujFakture"/>
+                        <Button layoutX="660.0" layoutY="187.0" mnemonicParsing="false" prefWidth="100.0" text="Dodaj do listy" onAction="#dodajFaktureDoListy"/>
+                        <Button layoutX="660.0" layoutY="221.0" mnemonicParsing="false" prefWidth="100.0" text="Usuń z listy" onAction="#usunFakture"/>
+                        <Button id="zatwierdzButton" layoutY="445.0" mnemonicParsing="false" prefWidth="100.0" text="Zatwierdz" onAction="#acceptAction"/>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Button id="wrocButton" layoutX="675.0" layoutY="545.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Wróć" onAction="#backToMainScreen"/>
+   </children>
+</AnchorPane>

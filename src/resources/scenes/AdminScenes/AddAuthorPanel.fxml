@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="parent" stylesheets="@../../styles/AddAuthorPanel.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdminControllers.AddAuthorPanelController">
+    <TextField fx:id="authorName" layoutX="415.0" layoutY="156.0" prefHeight="34.0" prefWidth="165.0" styleClass="buttonClass" />
+    <TextField fx:id="lastName" layoutX="415.0" layoutY="202.0" prefHeight="34.0" prefWidth="165.0" styleClass="buttonClass" />
+    <Button layoutX="415.0" layoutY="249.0" mnemonicParsing="false" onMouseClicked="#addAuthor" prefHeight="34.0" prefWidth="165.0" styleClass="buttonClass" text="Zatwierdz" />
+    <Button layoutX="415.0" layoutY="313.0" mnemonicParsing="false" onMouseClicked="#goBack" prefHeight="25.0" prefWidth="165.0" styleClass="buttonClass" text="Powrót" />
+    <ImageView fx:id="imageView" fitHeight="258.0" fitWidth="316.0" layoutX="81.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../../../java/Img/User.png" />
+        </image>
+    </ImageView>
+   <Label alignment="CENTER" contentDisplay="CENTER" layoutX="81.0" layoutY="23.0" prefHeight="25.0" prefWidth="265.0" text="Dodaj autora">
+      <font>
+         <Font size="24.0" />
+      </font>
+   </Label>
+</AnchorPane>

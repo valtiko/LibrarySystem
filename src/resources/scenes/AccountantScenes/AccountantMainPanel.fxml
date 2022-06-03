@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AccountantControllers.AccountantMainPanelController">
+    <Button layoutX="474.0" layoutY="43.0" mnemonicParsing="false" onAction="#goToAccountantBudgetPanel" prefHeight="127.0" prefWidth="225.0" text="Proponowane książki" />
+    <Button layoutX="474.0" layoutY="200.0" mnemonicParsing="false" onAction="#goToAccountantInvoicePanel" prefHeight="127.0" prefWidth="225.0" text="Faktury" />
+    <Button layoutX="675.0" layoutY="545.0" mnemonicParsing="false" onAction="#backToLoginScreen" prefHeight="25.0" prefWidth="100.0" text="Wyloguj" />
+</AnchorPane>
